@@ -1,0 +1,47 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Atualizando Sistema
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - name: Instalando Pacotes Essenciais
+      apt:
+        name:
+          - build-essential
+          - git
+          - curl
+          - wget
+          - zsh
+          - tmux
+          - htop
+          - fzf
+          - ripgrep
+          - docker.io
+          - docker-compose
+          - podman
+          - golang
+          - bat
+          - exa
+          - zoxide
+          - lazygit
+          - gh
+          - gpg
+        state: present
+
+    - name: Instalando Banco de Dados
+      apt:
+        name:
+          - postgresql
+          - mysql-server
+          - mongodb
+          - redis-server
+        state: present
+
+    - name: Instalando Ferramentas de Segurança
+      apt:
+        name:
+          - fail2ban
+        state: present

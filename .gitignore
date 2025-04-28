@@ -1,0 +1,24 @@
+# Arquivos gerados durante o setup
+*.log
+*.zip
+*.gpg
+__pycache__/
+*.pyc
+.DS_Store
+
+# Node
+node_modules/
+
+# Python
+.venv/
+.env
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+
+# Ansible
+*.retry
