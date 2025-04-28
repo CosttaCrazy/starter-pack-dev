@@ -24,4 +24,3 @@ jobs:
       - name: Testar Execução do Container
         run: |
           docker run --rm dev-environment echo "Container pronto para desenvolvimento! 🚀"
-
